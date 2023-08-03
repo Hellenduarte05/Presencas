@@ -2,6 +2,8 @@ package com.MundoSenai.Presenca.Model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="Pessoa")
 public class m_Pessoa {
@@ -12,8 +14,8 @@ public class m_Pessoa {
     private String email;
     private Long cpf;
     private Long telefone;
-    private String datanasc;
     private String senha;
+    private LocalDate datanasc;
 
     public Long getId() {
         return id;
@@ -55,12 +57,12 @@ public class m_Pessoa {
         this.telefone = telefone;
     }
 
-    public String getData_nasc() {
+    public LocalDate getDatanasc() {
         return datanasc;
     }
 
-    public void setData_nasc(String data_nasc) {
-        this.datanasc = data_nasc;
+    public void setData_nasc(LocalDate datanasc) {
+        this.datanasc = datanasc;
     }
 
     public String getSenha() {

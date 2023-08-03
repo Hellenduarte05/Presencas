@@ -27,6 +27,8 @@ public class C_Pessoa {
     public String postCadastro(@RequestParam("nome") String nome, @RequestParam("email") String email, @RequestParam("cpf") String cpf,
                                @RequestParam("telefone") String telefone, @RequestParam("data_nasc") String Datanasc,
                                @RequestParam("senha") String senha, @RequestParam("confsenha") String confsenha){
+        s_Pessoa.cadastrarPessoa(nome, email, cpf, telefone, Datanasc, senha, confsenha);
         return "redirect:/";
     }
+
 }
